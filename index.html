@@ -12,6 +12,9 @@ body{
     	justify-content: center;
     	align-items: center;
 	}
+	::-webkit-scrollbar {
+    display: none;
+}
 	#nav{
 		position:absolute;
 		top:0px;
@@ -22,7 +25,7 @@ body{
 		position:fixed;
 	}
 	#navname1{
-		margin-left:225px;
+		margin-left:50px;
 		font-weight:900;
 		background-color:transparent;
 		text-shadow: 0 0 10px rgba(30,144,255,0.95),
@@ -97,6 +100,23 @@ body{
         	0 0 400px rgba(30,144,255,0.05);
 		border-image: linear-gradient(to top right, #1565c0, #000, #1565c0) 3;
 	}
+	#navbut_user{
+		font-size:15px;
+		font-weight:100;
+		position:absolute;
+		top:50%;
+		margin-top:-22.5px;
+		right:50px;
+		position:stalic;
+		width:100px;
+		color:rgb(255,255,255);
+		height:45px;
+		background-color: rgba(23, 38, 78, 0.957);
+		border-radius:50px;
+		border:none;
+		position:stalic;
+	}
+	button:hover{cursor:pointer;}
 	#text{
 		font-weight:100;
 		color:white;
@@ -168,6 +188,33 @@ body{
 	}
 	#homeImg{cursor:pointer;}
 	#bg{position: fixed;top: 0;left: 0;z-index: -1;width: 100%;height: 100%;-o-object-fit: cover;object-fit: cover;-webkit-filter: blur(10px);filter: blur(10px);-webkit-transform: scale(1.2);transform: scale(1.2);}
+	#copyright{text-align:center;line-height: 10px;font-weight: 100;}
+	#introduce{height:150px;}
+	#intro_left_1st{
+		line-height:0px;
+		margin-left:50px;
+		position:absolute;
+		left:0px;
+	}
+	#intro_left_2st{
+		line-height:30px;
+		margin-right:50px;
+		position:absolute;
+		left:40%;
+	}#intro_left_3st{
+		line-height:30px;
+		margin-right:50px;
+		position:absolute;
+		left:60%;
+	}#intro_left_4st{
+		line-height:30px;
+		margin-right:50px;
+		position:absolute;
+		right:10%;
+	}
+	#intro_left_1st img{height:60px;}
+	#intro_left_1st p{font-size:25px;font-weight:600;color:rgba(127, 146, 194, 1);}
+	#introduce span{font-weight:600;}
 	</style>
 </head>
 <body>
@@ -179,13 +226,15 @@ body{
 	<p>
 		<span id="navname1">Satorna</span>
 		&nbsp;&nbsp;
-		<button id="navbut1">哈哈</button>
-		<button id="navbut2">哈哈</button>
-		<button id="navbut3">哈哈</button>
-		<button id="navbut4">哈哈</button>
-		<button id="navbut5">哈哈</button>
-		<button id="navbut6">哈哈</button>
-		<button id="navbut7">哈哈</button>
+		<button id="navbut1">首页</button>
+		<button id="navbut2">角色</button>
+		<button id="navbut3">武器</button>
+		<button id="navbut4">物资</button>
+		<button id="navbut5">世界</button>
+		<button id="navbut6">文艺馆</button>
+		<div>
+			<button id="navbut_user">登 录</button>
+		</div>
 	</p>
 </div>
 
@@ -213,13 +262,50 @@ body{
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-<div id="bottom_div">
-	<div id="br"></div>
-	<p>所有内容纯属虚构，与现实无关，理性看待</p>
-	<p>Copyright by @云游de鸽者</p>
-	<p>Box3ID : <a href="https://box3.fun/u/EYZTheBest">EYZTheBest</a> | Bilibili : <a href="https://space.bilibili.com/481128216">UID481128216</a></p>
-	<div id="br"></div>
-</div>
+<footer id="bottom_div">
+	<div id="br"></div><div id="br"></div><div id="br"></div>
+	<div id="introduce">
+		<div id="intro_left_1st">
+			<div id="br"></div><div id="br"></div>
+			<img src="https://satorna.github.io/image/webIcon.png"/>
+			<p>开放世界生存冒险类游戏</p>
+			<div id="br"></div>
+		</div>
+		<div id="intro_left_2st">
+			<p>
+			<span>游戏攻略</span><br>
+			<a>● 生存指南</a><br>
+			<a>● 旅行指南</a><br>
+			<a>● 进阶教程</a><br>
+			</p>
+			<div id="br"></div>
+		</div>
+		<div id="intro_left_3st">
+			<p>
+			<span>关于我们</span><br>
+			<a>● 游戏介绍</a><br>
+			<a>● 团队介绍</a><br>
+			</p>
+			<div id="br"></div>
+		</div>
+		<div id="intro_left_4st">
+			<p>
+			<span>服务协议</span><br>
+			<a>● 用户协议</a><br>
+			<a>● 免责声明</a><br>
+			</p>
+			<div id="br"></div>
+		</div>
+	</div>
+	<div id="lines"></div>
+	<div id="copyright">
+		<div id="br"></div>
+		<p>所有内容纯属虚构，与现实无关，敬请理性看待</p>
+		<p>版权所有 © 2023 Dorn Games</p>
+		<p>Box3Pro : <a href="https://dao3.fun/profile/50450184">@DornGames</a> | Github : <a href="https://github.com/satorna">@satorna</a></p>
+		<div id="br"></div>
+	</div>
+</footer>
 
 </body>
 </html>

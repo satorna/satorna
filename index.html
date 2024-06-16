@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Satorna | 星环少女官网</title>
+	<title>Satorna | 星环之书</title>
 	<link rel="icon" href="https://satorna.github.io/image/webIcon.png">
 	<style>
 		@charset "utf-8";
-body{
+		body{
 		width:100%;
 		height:100%;
 		background-color:rgb(226, 226, 236);
@@ -20,11 +20,14 @@ body{
 		top:0px;
 		left:0px;
 		width:100%;
-		height:75px;
+		height:60px;
 		background-color:rgba(27, 46, 94, 0.957);
+		background-image: url("https://satorna.github.io/image/nav_bg.jpg");
 		position:fixed;
+		z-index: 999;
 	}
 	#navname1{
+		vertical-align: middle;
 		margin-left:50px;
 		font-weight:900;
 		background-color:transparent;
@@ -66,6 +69,7 @@ body{
         	0 0 400px #1e90ff;
 	}
 	#navbut1,#navbut2,#navbut3,#navbut4,#navbut5,#navbut6,#navbut7,#navbut8,#navbut9{
+		vertical-align: middle;
 		width:80px;
 		color:white;
 		position:absolute;
@@ -136,7 +140,7 @@ body{
 		font-size:15px;
 		-webkit-text-stroke: 0.2px rgba(65, 92, 227, 0.651);
 	}
-	a{text-decoration:none;color:rgb(255, 255, 255);text-shadow: 2px 2px 5px rgba(30,144,255,0.5);}
+	a{text-decoration:none;color:rgb(255, 255, 255);text-shadow: 2px 2px 5px rgba(255,144,155,0.5);}
 	#br{height:5px;}
 	#bg{position: fixed;top: 0;left: 0;z-index: -1;width: 100%;height: 100%;-o-object-fit: cover;object-fit: cover;-webkit-filter: blur(10px);filter: blur(10px);-webkit-transform: scale(1.2);transform: scale(1.2);}
 	.intro{
@@ -213,36 +217,172 @@ body{
 		right:10%;
 	}
 	#intro_left_1st img{height:60px;}
-	#intro_left_1st p{font-size:25px;font-weight:600;color:rgba(127, 146, 194, 1);}
+	#intro_left_1st p{
+		font-size:25px;
+		font-weight:600;
+		color: #1565c0;
+		text-shadow:
+    		-1px -1px 0 #000,
+    		1px -1px 0 #000,
+    		-1px 1px 0 #000,
+    		1px 1px 0 #000; /* 文字描边 */
+	}
 	#introduce span{font-weight:600;}
+	#logo{
+		vertical-align: middle;
+		margin-top: -18px;
+		height: 52px;
+	}
+	#logo:hover{cursor: pointer;}
+	#subtitle,#subtitle1{
+		float: left;
+		background: #fff;
+		width: 15%;
+		height: 250px;
+		border-radius: 20px;
+		margin-left: 25px;
+		box-shadow: 0 0 20px rgba(30,144,255,0.5);
+	}
+	#subtitle:hover,#subtitle1:hover,#homeImg:hover{
+		cursor: pointer;
+		box-shadow: 0 0 20px rgba(255,144,155,1);
+		text-shadow: 0 0 10px rgba(255,144,155,1);
+	}
+	#subtitle:hover,#subtitle1:hover{transform: scale(1.02);}
+	#subtitle1{
+		margin-left: 0px;
+	}
+	#subtitle_img1,#subtitle_img{
+		height: 100px;
+		width: 100px;
+		margin: auto;
+		position: relative;
+		left: calc(50% - 55px);
+		top: 15%;
+	}
+	#subtitle_img{
+		left: calc(50% - 50px);
+	}
+	#subtitle p,#subtitle1 p{
+		text-align: center;
+		position: relative;
+		top: 25%;
+		font-size: 22px;
+		font-weight: 100;
+		line-height: 0px;
+		font-family: 新宋体;
+	}
+	#subtitle_container{
+		display: flex;
+  		justify-content: center;
+	}
+	#topBTN{
+		float: left;
+		line-height: 0px;
+		vertical-align: middle;
+		font-size: 25px;
+		font-weight: 100;
+		width: 50px;
+		height: 50px;
+		filter:brightness(3.2);
+	}
+	#topBTN:hover{cursor: pointer;transform: scale(1.05);}
+	#hmIMG{
+		margin-left: 35px;
+		margin-right: 35px;
+		vertical-align: middle;
+	}
+	#topImgCTN{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	#click_to_start{
+		position: fixed;
+		top: 0;left: 0;
+		z-index: 999999;
+		width: 100%;
+		height: 100%;
+		-o-object-fit: cover;
+		object-fit: cover;
+		-webkit-transform: scale(1);transform: scale(1);
+	}
+	#bgaudio{
+		display: none;
+	}
+	#footer_logo{
+		float: left;
+		vertical-align: middle;
+		height: 52px;
+	}
 	</style>
 </head>
 <body>
+	
+<img src="https://satorna.github.io/image/click_to_start_bg.jpg" id="click_to_start" onclick="start()"/>
+
 <br>
 
 <img src="https://satorna.github.io/image/homePic1.jpg" id="bg"/>
 
 <div id="nav">
 	<p>
-		<span id="navname1">Satorna</span>
+		<span id="navname1"><img src="https://satorna.github.io/image/TransparentLogo.png" id="logo" onclick="location.reload();"/></span>
 		&nbsp;&nbsp;
-		<button id="navbut1" onclick="window.open('https://satorna.github.io/','_self')">首页</button>
+		<!---<button id="navbut1" onclick="window.open('https://satorna.github.io/','_self')">首页</button>
 		<button id="navbut2" onclick="window.open('https://satorna.github.io/role','_self')">角色</button>
 		<button id="navbut3" onclick="window.open('https://satorna.github.io/weapon','_self')">武器</button>
 		<button id="navbut4" onclick="window.open('https://satorna.github.io/material','_self')">物资</button>
 		<button id="navbut5" onclick="window.open('https://satorna.github.io/world','_self')">世界</button>
 		<button id="navbut6" onclick="window.open('https://satorna.github.io/litart','_self')">文艺馆</button>
-		<div>
-			<button id="navbut_user" onclick="window.open('https://satorna.github.io/login','_self')">登 录</button>
+		---><div>
+			<button id="navbut_user">登 录</button>
 		</div>
 	</p>
 </div>
 
 <br><br><br>
 
-<p style="text-align:center;"><img src="https://satorna.github.io/image/homePic1.jpg" width="830px" height="350px" id="homeImg"/></p>
+<div id="topImgCTN">
+	<img src="https://satorna.github.io/image/left_ui.png" id="topBTN"/>
+	<p id="hmIMG">
+		<img src="https://satorna.github.io/image/homePic00001.jpg" width="830px" height="350px" id="homeImg"/>
+	</p>
+	<img src="https://satorna.github.io/image/right_ui.png" id="topBTN"/>
+</div>
 
-<div id="text">
+<p><br></p>
+
+<audio controls="controls" loop="loop" preload="auto"
+            	src="https://satorna.github.io/audio/cc2859fad2564fbaa6e1c87db31c7de2.mp3" id="bgaudio">
+      		你的浏览器版本太低，不支持audio标签
+</audio>
+
+<div id="subtitle_container">
+	<div id="subtitle1">
+		<img src="https://satorna.github.io/image/roles_ui.jpg" id="subtitle_img1">
+		<p>- 角色 -</p>
+	</div>
+	<div id="subtitle">
+		<img src="https://satorna.github.io/image/weapons_ui.jpg" id="subtitle_img">
+		<p>- 武器 -</p>
+	</div>
+	<div id="subtitle">
+		<img src="https://satorna.github.io/image/goods_ui.jpg" id="subtitle_img">
+		<p>- 物资 -</p>
+	</div>
+	<div id="subtitle">
+		<img src="https://satorna.github.io/image/world_ui.jpg" id="subtitle_img">
+		<p>- 世界 -</p>
+	</div>
+	<div id="subtitle">
+		<img src="https://satorna.github.io/image/museum_ui.jpg" id="subtitle_img">
+		<p>- 文艺馆 -</p>
+	</div>
+</div>
+
+
+<!---<div id="text">
 	
 	<div id="title" align="center">
 		<p id="title_don">文案</p>
@@ -258,7 +398,7 @@ body{
 		</div>
 	</div>
 	<br>
-</div>
+</div>--->
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
@@ -268,7 +408,8 @@ body{
 		<div id="intro_left_1st">
 			<div id="br"></div><div id="br"></div>
 			<img src="https://satorna.github.io/image/webIcon.png"/>
-			<p>开放世界生存冒险类游戏</p>
+			<img src="https://satorna.github.io/image/TransparentLogo.png" id="footer_logo"/>
+			<p>开 放 世 界 科 幻 游 戏</p>
 			<div id="br"></div>
 		</div>
 		<div id="intro_left_2st">
@@ -300,12 +441,28 @@ body{
 	<div id="lines"></div>
 	<div id="copyright">
 		<div id="br"></div>
-		<p>所有内容纯属虚构，与现实无关，敬请理性看待</p>
-		<p>版权所有 © 2023 Dorn Games</p>
+		<p>健康游戏忠告：抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。</p>
+		<p>版权所有 © 2024 DornGames</p>
 		<p>Box3Pro : <a href="https://dao3.fun/profile/50450184">@DornGames</a> | Github : <a href="https://github.com/satorna">@satorna</a></p>
 		<div id="br"></div>
 	</div>
 </footer>
 
 </body>
+
+<script>
+function start(){
+	document.getElementById("bgaudio").play();
+	var t = 0;
+	var d = setInterval(()=>{
+		t++;
+		document.getElementById("click_to_start").style.opacity = 1 - 0.01 * t;
+		if(t > 100){
+			document.getElementById("click_to_start").style.display = "none";
+			clearInterval(d);
+		}
+	},20);
+}
+</script>
+
 </html>

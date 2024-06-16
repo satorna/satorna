@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="https://satorna.github.io/css/nav.css"/>
 	<link rel="stylesheet" href="https://satorna.github.io/css/footer.css"/>
 	<link rel="stylesheet" href="https://satorna.github.io/css/homePicArea.css"/>
+	<script src="js/main.js"></script>
 	<style>
 		@charset "utf-8";
 		body{
@@ -67,7 +68,7 @@
 	#tools_name{margin-left:30px;color:white;font-size:25px;}
 	#tools_name a:hover{color:rgb(102,153,255);}
 
-	#bg{position: fixed;top: 0;left: 0;z-index: -1;width: 100%;height: 100%;-o-object-fit: cover;object-fit: cover;-webkit-filter: blur(10px);filter: blur(10px);-webkit-transform: scale(1.2);transform: scale(1.2);}
+	#bg{position: fixed;top: 0;left: 0;z-index: -1;width: 100%;height: 100%;-o-object-fit: cover;object-fit: cover;-webkit-filter: blur(5px);filter: blur(5px);-webkit-transform: scale(1.01);transform: scale(1.01);}
 	#copyright{text-align:center;line-height: 10px;font-weight: 100;}
 	
 	#click_to_start{
@@ -91,7 +92,7 @@
 
 <br>
 
-<img src="https://satorna.github.io/image/homePic1.jpg" id="bg"/>
+<img src="https://satorna.github.io/image/LoginPic_bg.jpg" id="bg"/>
 
 <div id="nav">
 	<p>
@@ -210,7 +211,7 @@
 	<div id="copyright">
 		<div id="br"></div>
 		<p>健康游戏忠告：抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。</p>
-		<p>版权所有 © 2024 DornGames</p>
+		<p>版权所有 © 2024 多恩星环DornGames   |   All right reserved.</p>
 		<p>Box3Pro : <a href="https://dao3.fun/profile/50450184">@DornGames</a> | Github : <a href="https://github.com/satorna">@satorna</a></p>
 		<div id="br"></div>
 	</div>
@@ -219,19 +220,7 @@
 </body>
 
 <script>
-function start(){
-	document.getElementById("bgaudio").play();
-	var t = 0;
-	var d = setInterval(()=>{
-		t++;
-		document.getElementById("click_to_start").style.opacity = 1 - 0.01 * t;
-		if(t > 100){
-			document.getElementById("click_to_start").style.display = "none";
-			clearInterval(d);
-		}
-	},20);
-}
-document.oncontextmenu = () => false;
+
 </script>
 
 </html>
